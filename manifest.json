@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Network Speed Notification",
+  "version": "1.0",
+  "description": "Displays notifications based on network speed in real-time",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+"action": {
+        "default_popup": "popup.html",
+        "default_icon": "logo.png"
+    },
+    "icons": {
+        "128": "logo.png"
+    }
+}
